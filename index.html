@@ -30,6 +30,11 @@
             from { opacity: 1; }
             to { opacity: 0.5; }
         }
+        .green-text {
+            color: green;
+            font-size: 0.75em;
+            margin-top: 10px; /* Ajoute un peu d'espace au-dessus du texte vert */
+        }
         .image-container {
             position: absolute;
             top: 50%;
@@ -58,7 +63,7 @@
     </style>
 </head>
 <body>
-    <h1>C'est raté, attention la bouilloire brûle</h1>
+    <h1>C'est raté,<br>attention la bouilloire brûle<br><span class="green-text">Si vous êtes perdu, <br>demandez à l'ange de Bellevigne 🍇<br></span></h1>
     <div class="image-container">
         <img src="photo_ben.png" alt="Image d'avertissement gauche">
         <img src="photo_ben.png" alt="Image d'avertissement droite">
