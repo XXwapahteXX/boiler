@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Alerte Bouilloire</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden; /* Ajouté pour éviter le débordement */
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: red;
+            text-shadow: 0 0 10px red, 0 0 20px red;
+            animation: flash 1s infinite alternate;
+            z-index: 10;
+            position: relative; /* Ajouté pour superposer le texte */
+        }
+        @keyframes flash {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+        .image-container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .image-container img {
+            max-width: 40%;
+            height: auto;
+            filter: drop-shadow(0 0 10px red);
+            animation: glow 1s infinite alternate;
+        }
+        .image-container img:nth-child(1) {
+            transform: rotate(-25deg);
+        }
+        .image-container img:nth-child(2) {
+            transform: rotate(25deg);
+        }
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 5px red); }
+            100% { filter: drop-shadow(0 0 20px red); }
+        }
+    </style>
+</head>
+<body>
+    <h1>C'est raté, attention la bouilloire brûle</h1>
+    <div class="image-container">
+        <img src="photo_ben.png" alt="Image d'avertissement gauche">
+        <img src="photo_ben.png" alt="Image d'avertissement droite">
+    </div>
+</body>
+</html>
